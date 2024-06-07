@@ -97,10 +97,10 @@ if b and attempt[1] > 20:
     ## Arithmetic Recommendation
     '''
     upid_rating = ingest_problem_data('all')
-    upid_filter = upid_rating[upid_rating['categories'] == 'Geometry'][['upid', 'categories', 'num_activities', 'accuracy','final_init']].copy()
+    upid_filter = upid_rating[upid_rating['categories'] == 'Arithmetic'][['upid', 'categories', 'num_activities', 'accuracy','final_init']].copy()
     upid_filter.columns = ['ID', 'Topic', 'Global Attempt', 'Global Acc', 'Rating']
 
-    rating = df_uuid_rating.loc[df_uuid_rating['categories'] == 'Geometry', 'Current Rating'].values[0]
+    rating = df_uuid_rating.loc[df_uuid_rating['categories'] == 'Arithmetic', 'Current Rating'].values[0]
 
     upid_filter['diff'] = rating - upid_filter['Rating']
     upid_filter['Expected Solving%'] = 100 * upid_filter['diff'].apply(logistic_function).round(4)
@@ -123,10 +123,10 @@ if c and attempt[2] > 20:
     ## Geometry Recommendation
     '''
     upid_rating = ingest_problem_data('all')
-    upid_filter = upid_rating[upid_rating['categories'] == 'Algebra'][['upid', 'categories', 'num_activities', 'accuracy','final_init']].copy()
+    upid_filter = upid_rating[upid_rating['categories'] == 'Geometry'][['upid', 'categories', 'num_activities', 'accuracy','final_init']].copy()
     upid_filter.columns = ['ID', 'Topic', 'Global Attempt', 'Global Acc', 'Rating']
 
-    rating = df_uuid_rating.loc[df_uuid_rating['categories'] == 'Algebra', 'Current Rating'].values[0]
+    rating = df_uuid_rating.loc[df_uuid_rating['categories'] == 'Geometry', 'Current Rating'].values[0]
 
     upid_filter['diff'] = rating - upid_filter['Rating']
     upid_filter['Expected Solving%'] = 100 * upid_filter['diff'].apply(logistic_function).round(4)
