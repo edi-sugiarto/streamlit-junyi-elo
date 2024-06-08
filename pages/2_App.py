@@ -47,9 +47,9 @@ col1.metric("Algebra", attempt[0])
 col2.metric("Arithmetic", attempt[1])
 col3.metric("Geometry", attempt[2])
 
-text1 = 'Learn Algebra' if attempt[0] > 20 else 'Algebra Placement'
-text2 = 'Learn Arithmetic' if attempt[1] > 20 else 'Arithmetic Placement'
-text3 = 'Learn Geometry' if attempt[2] > 20 else 'Geometry Placement'
+text1 = "Learn Algebra" if attempt[0] > 20 else 'Algebra Placement Test'
+text2 = "Learn Arithmetic" if attempt[1] > 20 else 'Arithmetic Placement Test'
+text3 = "Learn Geometry" if attempt[2] > 20 else 'Geometry Placement Test'
 
 learn1, learn2, learn3 = st.columns(3)
 a = learn1.button(text1)
@@ -231,5 +231,6 @@ if show_recent:
 
     st.plotly_chart(fig2, use_container_width=True)
 
+    st.caption('Currently, for this proof-of-concept, recent activity is only for Arithmetic')
 
 
