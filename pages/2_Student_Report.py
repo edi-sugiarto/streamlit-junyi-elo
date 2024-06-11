@@ -68,7 +68,7 @@ def logistic_function(x, L=1, k=1, d=400, ofs=2):
 if a and attempt[0] > 20:
     '''
     ***
-    ## Algebra Recommendation
+    ## Problemset Recommendation: Algebra
     '''
     upid_rating = ingest_problem_data('all')
     upid_filter = upid_rating[upid_rating['categories'] == 'Algebra'][['upid', 'categories', 'num_activities', 'accuracy','final_init']].copy()
@@ -85,16 +85,16 @@ if a and attempt[0] > 20:
     st.write('Current Rating:', round(rating, 4))
     easy_col, hard_col = st.columns(2)
     with easy_col:
-        st.write('### Normal')
+        st.write('### Normal Difficulty Problemset')
         st.write(easy_)
     with hard_col:
-        st.write('### Challenging')
+        st.write('### Challenging Difficulty')
         st.write(hard_)
 
 if b and attempt[1] > 20:
     '''
     ***
-    ## Arithmetic Recommendation
+    ## Problemset Recommendation: Arithmetic
     '''
     upid_rating = ingest_problem_data('all')
     upid_filter = upid_rating[upid_rating['categories'] == 'Arithmetic'][['upid', 'categories', 'num_activities', 'accuracy','final_init']].copy()
@@ -111,16 +111,16 @@ if b and attempt[1] > 20:
     st.write('Current Rating:', round(rating, 4))
     easy_col, hard_col = st.columns(2)
     with easy_col:
-        st.write('### Normal')
+        st.write('### Normal Difficulty Problemset')
         st.write(easy_)
     with hard_col:
-        st.write('### Challenging')
+        st.write('### Challenging Difficulty')
         st.write(hard_)
 
 if c and attempt[2] > 20:
     '''
     ***
-    ## Geometry Recommendation
+    ## Problemset Recommendation: Geometry
     '''
     upid_rating = ingest_problem_data('all')
     upid_filter = upid_rating[upid_rating['categories'] == 'Geometry'][['upid', 'categories', 'num_activities', 'accuracy','final_init']].copy()
@@ -137,10 +137,10 @@ if c and attempt[2] > 20:
     st.write('Current Rating:', round(rating, 4))
     easy_col, hard_col = st.columns(2)
     with easy_col:
-        st.write('### Normal')
+        st.write('### Normal Difficulty Problemset')
         st.write(easy_)
     with hard_col:
-        st.write('### Challenging')
+        st.write('### Challenging Difficulty')
         st.write(hard_)
 
 

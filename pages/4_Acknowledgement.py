@@ -117,13 +117,13 @@ st.markdown(
 st.markdown("<div class='main-header'>Acknowledgements</div>", unsafe_allow_html=True)
 
 # Create two columns for the main content and inspiration
-col1, col2 = st.columns([3, 1])
+col1, col2 = st.columns([4, 1])
 
 # Introduction text in the first column
 with col1:
     st.markdown("""
     <div class='section'>
-    Thank you for using our application. We appreciate your visit and would like to acknowledge the following individuals and organizations for their contributions and support.
+    Thank you for trying out our application. We appreciate your visit and would like to acknowledge the following individuals and organizations for their contributions and support.
     </div>
     """, unsafe_allow_html=True)
 
@@ -131,10 +131,10 @@ with col1:
     st.markdown("<div class='sub-header'>Individuals and Organizations</div>", unsafe_allow_html=True)
     st.markdown("""
     <div class='section'>
-    - Class Manager at Dibimbing: For their excellent management and support.<br>
-    - Mentors: For their invaluable guidance and direction.<br>
-    - Classmates at Dibimbing DS24: For their camaraderie and support.<br>
-    - Dibimbing.id: For providing the platform and resources necessary for our growth and success.
+    - Bank Indonesia as organizer of the hackathon which enable us to create this idea.<br>
+    - Junyi Academy which provided extensive open-sourced student activity dataset.<br>
+    - Nicholas Hilton for his ELO system adaptation into football competition.<br>
+    - Dibimbing.id as the initial platform in which our team met with each other.
     </div>
     """, unsafe_allow_html=True)
 
@@ -150,7 +150,7 @@ with col1:
     st.markdown("<div class='sub-header'>Developers</div>", unsafe_allow_html=True)
     
     # Create two columns for developers
-    dev_col1, dev_col2 = st.columns(2)
+    dev_col1, dev_col2, dev_col3 = st.columns(3)
     
     with dev_col1:
         st.markdown("""
@@ -158,7 +158,7 @@ with col1:
             <div class='developer-name'>Edi Sugiarto</div>
             <div class='developer-role'>Project Leader<br>Machine Learning Developer</div>
             <div class='developer-description'>
-                Machine learning developer and researcher. Three years of experience in engineering and data field. Compiled various projects ranging from reactor modeling, defect improvement, and customer segmentation.
+                Machine learning R&D lead. Three years of experience in engineering and data field. Compiled various projects ranging from reactor modeling, defect improvement, and customer segmentation.
             </div>
             <div class='social-icons'>
                 <a href='https://www.linkedin.com/in/edi-sugiarto/' target='_blank'>
@@ -190,6 +190,24 @@ with col1:
         </div>
         """, unsafe_allow_html=True)
 
+    with dev_col3:
+        st.markdown("""
+        <div class='developer-card'>
+            <div class='developer-name'>Kurnia A. Ra'if</div>
+            <div class='developer-role'>Team Member<br>Data Scientist and IT Professional</div>
+            <div class='developer-description'>
+                Over 4 years of IT experience, including 3+ years as a data scientist across Banking, Oil & Gas, and Recruitment sectors. Has several patents in mathematical models and certified in AI/ML/DL
+            </div>
+            <div class='social-icons'>
+                <a href='https://www.linkedin.com/in/anwaraif/' target='_blank'>
+                    <img src='https://cdn-icons-png.flaticon.com/512/174/174857.png' alt='LinkedIn'>
+                </a>
+                <a href='https://github.com/anwarraif' target='_blank'>
+                    <img src='https://cdn-icons-png.flaticon.com/512/25/25231.png' alt='GitHub'>
+                </a>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
 
 # Quotes in the second column
 with col2:

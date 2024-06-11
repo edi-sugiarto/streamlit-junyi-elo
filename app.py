@@ -69,24 +69,23 @@ with col2:
     st.markdown('<p class="sub-header">Background</p>', unsafe_allow_html=True)
     st.markdown("""
     <div class="section">
-        The vision of "Golden Indonesia 2045" underscores the critical role of education in national progress. Despite its importance, Indonesia's education system faces significant challenges, such as disparities between urban and rural areas, inadequate access to resources, and low learning outcomes. Our project aims to address these issues through an innovative application of the ELO rating system, originally developed for chess. We are developing a custom ELO rating system for educational purposes, capable of analyzing student interactions with questions and assigning appropriate ratings to both students and questions across various topics. This system will recommend questions that match each student's skill level, maintaining engagement and providing precise feedback to help teachers plan effective strategies. Additionally, the system can also identify top-performing students for international competitions and regions requiring additional resources and support.
+        We are developing a rating system for education. The algorithm is created from scratch with only NumPy, inspired from Chess ELO system. By employing custom reinforcement learning algorithm at student interactions with questions, we are assigning appropriate ratings to both students and questions across various topics. 
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown('<p class="sub-header">Using Junyi Academy Dataset</p>', unsafe_allow_html=True)
+    st.markdown("""
+    <div class="section">
+        With ratings, we will be able to recommend questions that match each student's skill level, maintaining engagement and providing precise feedback to help teachers plan effective strategies. Additionally, the system can also identify top-performing students for international competitions and regions requiring additional resources and support.
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown('<p class="sub-header">Dataset: Junyi Academy Student Activity</p>', unsafe_allow_html=True)
     st.markdown("""
     <div class="section">
         Using the extensive open-source Junyi Academy dataset, particularly focused on junior high school problems, we adapted the ELO system to evaluate student performance. Logistic functions were employed to estimate the probability of students solving problems, adjusting ratings accordingly. Early results suggest that our adapted ELO-based recommendation system enhances predictive accuracy in determining whether a student can solve a given question.
     </div>
     """, unsafe_allow_html=True)
 
-# Machine Learning Section
-st.markdown('<h1>Machine Learning</h1>', unsafe_allow_html=True)
-st.markdown("""
-<div class="section">
-    The machine learning component of this project involves developing a model to predict student performance based on their interactions with educational content. We utilize various algorithms to analyze student data and provide personalized recommendations. Our model aims to improve student engagement and learning outcomes by accurately predicting the difficulty level of questions and adjusting the ELO ratings of both students and questions accordingly.
-</div>
-""", unsafe_allow_html=True)
 
 # Mechanism Section
 st.markdown('<p class="sub-header">Mechanism</p>', unsafe_allow_html=True)
@@ -99,6 +98,9 @@ data = {
 }
 df = pd.DataFrame(data)
 st.table(df.style.hide(axis='index'))
+
+path = 'ML_Diagram.png'
+st.image(path, caption="ML Diagram", use_column_width=True)
 
 st.markdown('<p class="sub-header">Key Aspects</p>', unsafe_allow_html=True)
 
